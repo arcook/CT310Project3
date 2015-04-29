@@ -1,7 +1,7 @@
 		</main>     
 		<footer class='footer'>
             <div>
-			<p>Modified by Andrew Cook & Peter Fiorella.
+			<p>Modified by Andrew Cook, Brad Alberts, & Travis Menghini
             <?php
                 $timeDiff =  time() - $_SESSION['time'];
                 echo "<br/>Session started $timeDiff seconds ago.</p>"; 

@@ -79,7 +79,7 @@ class User {
 	//updates the users profile information
 	//returns false if error
     function updateUser(){
-		$db = new SQLite3('lib/p2.db');
+		$db = new SQLite3('lib/p3.db');
 		$sql = "UPDATE User SET firstName='$this->firstName', lastName='$this->lastName', questionID='$this->qID', answer='$this->answer', phoneNumber='$this->phoneNumber', gender='$this->gender', interests='$this->interests', description='$this->description'  WHERE ID = $this->userID";
 		return $db->exec($sql);
 		//$stm = $db->prepare($sql);
@@ -96,7 +96,7 @@ class User {
 	//returns false if error
 	function createUser()
 	{
-		$db = new SQLite3('lib/p2.db');
+		$db = new SQLite3('lib/p3.db');
 		$sql = "INSERT INTO User('email','password','firstName', 'lastName', 'questionID', 'answer', 'phoneNumber', 'gender', 'interests', 'description') 
 		VALUES('$this->email','$this->hash','$this->firstName','$this->lastName','$this->qID','$this->answer','$this->phoneNumber','$this->gender','$this->interests','$this->description')";
 		return $db->exec($sql) == 1;
@@ -312,7 +312,7 @@ class User {
 	}
 
 	function updatePicture(){
-		$db = new SQLite3('lib/p2.db');
+		$db = new SQLite3('lib/p3.db');
 		$update = "UPDATE User SET picturePath = '$this->picturePath' WHERE ID = $this->userID";
 		return $db->exec($update);
 	}

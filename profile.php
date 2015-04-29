@@ -44,12 +44,14 @@
 								}else if(!Util::isImage($_FILES['img']['type'])){
 									$errors[] = "Error: Uploaded file is not an image";
 								}else{
-									$name = $_FILES['img']['name'];
+									$type = str_replace("image/",".", $_FILES['img']['type']);
+									$name = $u->userID.$type;
 									$dir = "assets/img/$name";
 									$filepath = __DIR__ . "/" . $dir;
 									move_uploaded_file($_FILES['img']['tmp_name'], $filepath);
 									$u->picturePath = $dir;
 									$u->updatePicture();
+									chmod($filepath,0644);
 								}
 							}
 							if(isset($_POST['save'])){

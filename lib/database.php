@@ -1,7 +1,7 @@
 <?php
 class Database extends PDO{
 	public function __construct(){
-		parent::__construct("sqlite:lib/p2.db");
+		parent::__construct("sqlite:lib/p3.db");
 	}
 
 	//adds a user to the User database

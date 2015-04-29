@@ -9,12 +9,12 @@
 <html lang="en">
 <head>
 	 <meta charset="UTF-8">
-	 <meta name="author" content="Andrew Cook and Peter Fiorella" />
-	 <meta name="description" content="Ct310 Project 2" />
+	 <meta name="author" content="Andrew Cook, Travis Menghini, Brad Alberts" />
+	 <meta name="description" content="Ct310 Project 3" />
 	 <meta name="keywords" content="Fake Social Network" />
 	 <link href="//www.cs.colostate.edu/~ct310/yr2015sp/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
-	 <title><?php echo $title ?> -  myFace</title>
+	 <title><?php echo $title ?> -  FacePlace</title>
 	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -24,8 +24,8 @@
 	<div class="container header-title">
     	<div class="group-title pull-left">
     		<a href='index.php'>
-    		<img src='assets/img/icon.png' alt='myFace Logo' class="hidden-xs" width="50">
-    		myFace</a>
+    		<img src='assets/img/icon.png' alt='FacePlace Logo' class="hidden-xs" width="50">
+    		FacePlace</a>
     	</div>
     	<div class="pull-right">
         	<?php if($title !== "Login")
