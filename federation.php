@@ -54,13 +54,15 @@ Util::clearPartialLogin();
                         {
                             $name = str_replace('"', "", $value['name']);
                             $url = $value['url'];
+                            $x = " ";
                             if(Util::isLoggedIn())
                             {
-                                echo "<tr><td onmouseover='getPurpose($url)'>$name</td></tr>";
+
+                                echo "<tr><td onmouseover='getPurpose($url)' onmouseout='getPurpose($x)';'><a href=$url>$name</td></a></tr>";
                             }
                             else
                             {
-                                echo "<tr><td>$name</td></tr>";
+                                echo "<tr><td><a href=$url>$name</td></a></td></tr>";
                             }
                         }
                     ?>
