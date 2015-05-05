@@ -336,3 +336,9 @@ a:active {color: black;}
 .error{
 	color: red;
 }
+
+textarea#purpose
+{
+	width: 50%;
+	height: 25%;
+}

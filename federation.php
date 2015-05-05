@@ -31,8 +31,7 @@ Util::clearPartialLogin();
 ?>
 <script>
     function getPurpose(url) {
-        $("#purpose").val('');
-        $("#purpose").addClass("hidden");
+        clearTextbox();
         $.get(url+"/purpose.php",{}, function(data, status){
             if(data.purpose !== undefined)
             {
@@ -40,7 +39,12 @@ Util::clearPartialLogin();
                 $("#purpose").removeClass("hidden");
             }
         });
-}
+    }
+    function clearTextbox()
+    {
+        $('#purpose').val('');
+        $('#purpose').addClass("hidden");
+    }
 </script>
     <div class="container-fluid">
         <div class="row">
@@ -53,16 +57,15 @@ Util::clearPartialLogin();
                         foreach($roster as $key => $value)
                         {
                             $name = str_replace('"', "", $value['name']);
-                            $url = $value['url'];
+                            $url = str_replace("\\", "",$value['url']);
                             $x = " ";
                             if(Util::isLoggedIn())
                             {
-
-                                echo "<tr><td onmouseover='getPurpose($url)' onmouseout='getPurpose($x)';'><a href=$url>$name</td></a></tr>";
+                                echo "<tr><td onmouseover='getPurpose($url)' onmouseout='clearTextbox()'><a href=$url>$name</a></td></tr>".PHP_EOL;
                             }
                             else
                             {
-                                echo "<tr><td><a href=$url>$name</td></a></td></tr>";
+                                echo "<tr><td><a href=$url>$name</a></td></tr>".PHP_EOL;
                             }
                         }
                     ?>
