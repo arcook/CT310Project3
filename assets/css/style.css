@@ -1,0 +1,338 @@
+#page-logo{
+	width: 350px;
+	margin-left: 20px;
+}
+
+#page-logo a{
+	text-decoration: none;
+}
+
+#page-logo #link-to-home{
+	border: 4px solid white;
+	border-radius: 20px;
+	padding: 20px;
+	background: rgb(102, 119, 164);
+	width: 350px;
+	float: left;
+}
+
+.box{
+  width: 260px;
+  height: 50px;
+  float: right;
+  margin-right: 18px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+	color: black;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/*HEADER*/
+
+header {
+	background-color: #428bca;
+	width: 100%;
+	margin: 0vh 0vh;
+	padding:2vh 0vh 0vh 0vh;
+	/*height: 150px;*/
+}
+
+
+.navbar{
+	margin-bottom: 10px;
+}
+.group-title a:link{color: white;}
+.group-title a:visited {color: white;}
+.group-title a:hover {color: lightgrey; text-decoration: none;}
+.group-title a:active {color: white;}
+
+.group-title {
+  font-size: 36px;
+  font-weight: 400;
+  font-family:  Arial, sans-serif;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 321px) {
+
+  .pull-right { 
+    float: none!important; 
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+  .pull-right {
+    float: none!important; 
+  }
+
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+	color: black;
+	background-color: white;
+}
+nav a {
+	color: blue;
+	font-size: 15px;
+	text-decoration: none;
+	padding: 14px 15px 10px 15px;
+}
+
+
+div#logBox{
+	margin-bottom: 10px;
+	color: black;
+}
+
+
+/*MAIN*/
+
+h2 {
+	margin-bottom: 10px;
+}
+
+hr {
+	margin: 10px 0;
+}
+
+div.center
+{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px, 20px;
+	width: 400px;
+}
+
+
+.leftContent{
+	background: white;
+	padding-left: 30px;
+	height: auto;
+}
+
+
+.leftContent img {
+	float: left;
+	margin: 0 10px 20px 0;
+	width: 200px;
+}
+
+.leftContent ul 
+{
+	list-style: none;
+}
+
+.leftContent div#search-list div.profile-thumb
+{
+	float: left;
+	text-align: center;
+	width: 50%;
+	height: 175px;
+	margin: 5px 10px 5px 10px;
+
+
+}
+
+.profile-thumb:hover > a > span{
+	color: gray;
+	text-decoration: underline;
+}
+
+.profile-thumb a:visited{
+	color: black;
+}
+
+
+
+.leftContent div#search-list div.profile-thumb img{
+	width: 50%;
+	height: 150px;
+	margin: 0px 0px 0px 0px;
+
+
+}
+
+.leftContent div#search-list div.profile-thumb span{
+	display: inline-block;
+	margin: 3px auto 3px auto;
+	font-size: 13pt;
+	font-family: Arial;
+}
+
+.friendsList
+{
+	background: white;
+	height: 78vh;
+    overflow-y: auto;
+}
+.friendsList p 
+{
+	font-size: 15pt;
+}
+
+.rightContent {
+	background: white;
+	height: auto;
+    border: 1px solid grey;
+}
+
+.rightContent ul {
+	padding-left: 20px;
+
+}
+
+.rightContent .user-list{
+	width: 110px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.rightContent .user-list div.profile-thumb{
+	float: left;
+	text-align: center;
+	width: 110px;
+	/*//height: 135px;*/
+	margin: 5px 0px 5px 0px;
+
+
+
+}
+
+.profile-thumb{
+	clear: both;
+	padding-top: 10px;
+}
+
+
+
+div.profile-thumb img{
+	width: 110px;
+	height: 110px;
+	margin: 0px 0px 0px 0px;
+
+
+}
+
+.rightContent .user-list div.profile-thumb span{
+	float: bottom;
+	display: inline-block;
+	margin: 0px auto 3px auto;
+	font-size: 13pt;
+	font-family: Arial;
+}
+
+footer {
+	clear: both;
+	color: white;
+	margin-top: 10px;
+	/*height: 10vh;*/
+	text-align: center;
+	background-color: #428bca;
+}
+
+
+.footer{
+	clear: both;
+	position: relative;
+  bottom: 0;
+   width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 55px;
+}
+
+
+div.wrap-textarea {
+	overflow:auto;
+	height: 90%;
+}
+
+div.wrap-textarea input[type=text] {
+	width: 100%;
+	height: 7%;
+	margin-bottom: 10px;
+	font-size: 12px;
+	line-height: 18px;
+	outline: none;
+	overflow: auto;
+	resize: none;
+	padding: 10px;
+}
+
+div.wrap-textarea textarea {
+	font-size: 12px;
+	line-height: 18px;
+	outline: none;
+	overflow: auto;
+	resize: none;
+	width: 100%;
+	height: 60%;
+	padding: 10px;
+}
+
+div.wrap-textarea input[type=submit], input[type=button] {
+	background: white;
+	border:0 none;
+    border-radius: 5px;
+	cursor:pointer;
+	padding:5px 15px; 
+	margin-right: 5px;
+	width: 80px;
+	outline: none;
+	float: left;
+}
+
+div.wrap-textarea input[type=submit]:hover, input[type=button]:hover {
+/*	background: red;*/
+}
+
+div.save-success {
+	color: rgb(247, 238, 238);
+	background: #FFD6FF;
+	padding: 12px;
+	float: right;
+}
+
+div.errors
+{
+	color: red;
+	text-align: center;
+}
+
+
+
+a:link {color: black;}
+a:visited {color: black;}
+a:hover {color: lightgrey; text-decoration: none;}
+a:active {color: black;}
+
+.friendBtn{
+	float: right;
+	margin-top: 20px;'
+}
+
+.form-control{
+	color: black;
+}
+
+.profilePic{
+	clear: both;
+}
+
+
+.error{
+	color: red;
+}
