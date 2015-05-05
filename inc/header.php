@@ -81,13 +81,8 @@
 						echo '<li><a id="admin-page" href="admin.php">Admin</a></li>';
 					}
 				?>
-<<<<<<< HEAD
               <li><a href="federation.php">The Federation</a></li>
           </ul>
-
-=======
-          </ul>
->>>>>>> 79289e9dcc2679ab4cf19f414cb9816924ca00d6
         </div><!--/.nav-collapse -->
       </div>
     </nav>
