@@ -81,6 +81,7 @@
 						echo '<li><a id="admin-page" href="admin.php">Admin</a></li>';
 					}
 				?>
+
               <li><a href="federation.php">The Federation</a></li>
           </ul>
         </div><!--/.nav-collapse -->

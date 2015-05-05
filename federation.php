@@ -29,22 +29,46 @@ $_SESSION['lastPage'] = 'index.php';
 //var_dump($util->isIpValid());
 Util::clearPartialLogin();
 ?>
+<script>
+    function getPurpose(url) {
+        $("#purpose").val('');
+        $("#purpose").addClass("hidden");
+        $.get(url+"/purpose.php",{}, function(data, status){
+            if(data.purpose !== undefined)
+            {
+                $("#purpose").val(data.purpose);
+                $("#purpose").removeClass("hidden");
+            }
+        });
+}
+</script>
     <div class="container-fluid">
         <div class="row">
             <!-- <div class="page-wrap">
                 <div class="leftContent">-->
             <div class="col-md-6 col-lg-6 col-sm-6 leftContent">
                 <h2>The Federation</h2>
-                <table>
+                <table id="fedTable">
                     <?php
                         foreach($roster as $key => $value)
                         {
                             $name = str_replace('"', "", $value['name']);
                             $url = $value['url'];
-                            echo "<tr><td onmouseover='getPurpose($url)'>$name</td></tr>";
+                            if(Util::isLoggedIn())
+                            {
+                                echo "<tr><td onmouseover='getPurpose($url)'>$name</td></tr>";
+                            }
+                            else
+                            {
+                                echo "<tr><td>$name</td></tr>";
+                            }
                         }
                     ?>
                 </table>
+                <?php 
+                    if(Util::isLoggedIn())
+                        echo '<textarea id="purpose" class="hidden"></textarea>';
+                ?>
             </div>
             <?php include("friendsList.php");
             include("inc/rightContent.php");?>
